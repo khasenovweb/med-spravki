@@ -55,22 +55,22 @@
             <div class="slider owl-carousel">
                 <!-- slide -->
                 <div class="slide" style="
-              background-image: url(https://kuzbass-today.ru/wp-content/uploads/2020/06/646o68.jpg);
-            ">
+          background-image: url(https://kuzbass-today.ru/wp-content/uploads/2020/06/646o68.jpg);
+        ">
                     <div class="slide__title"> Водительская комиссия успейте пройти по старой цене! </div>
                     <div class="slide__desc"> Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не </div>
                     <a href="" class="btn">Подробнее</a>
                 </div>
                 <!--END slide -->
                 <!-- slide -->
-                <div class="slide" style="background-image: url(img/slide.png);">
+                <div class="slide" style="background-image: url(img/slide.png)">
                     <div class="slide__title"> Водительская комиссия успейте пройти по старой цене! </div>
                     <div class="slide__desc"> Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не </div>
                     <a href="" class="btn">Подробнее</a>
                 </div>
                 <!--END slide -->
                 <!-- slide -->
-                <div class="slide" style="background-image: url(img/slide.png);">
+                <div class="slide" style="background-image: url(img/slide.png)">
                     <div class="slide__title"> Водительская комиссия успейте пройти по старой цене! </div>
                     <div class="slide__desc"> Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не </div>
                     <a href="" class="btn">Подробнее</a>
@@ -83,6 +83,10 @@
     <!--========================= services =========================-->
     <div class="services">
         <div class="container">
+            <div class="services__titleblock">
+                <h2 class="section__title">Услуги</h2>
+                <div class="services__titleblock__line"></div>
+            </div>
             <div class="services__items">
                 <!-- services__item -->
                 <div class="services__item">
@@ -278,6 +282,124 @@
         </div>
     </div>
     <!--=========================END services =========================-->
+    <!--========================= record =========================-->
+    <div class="record">
+        <div class="container">
+            <div class="record__formblock">
+                <div class="section__title record__formblock__title"> Запишитесь на прием! </div>
+                <div class="record__formblock__desc"> Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не </div>
+                <form action="" class="record__form">
+                    <div class="inputgroup">
+                        <input type="text" placeholder="ФИО" />
+                    </div>
+                    <div class="inputgroup">
+                        <input type="text" placeholder="+7 (___) ___-____" />
+                    </div>
+                    <button class="btn">Записаться</button>
+                </form>
+                <div class="record__form__politics"> Нажимая «Записаться», я соглашаюсь с условиями <a href="">Политики конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=========================END record =========================-->
+    <!--========================= contacts =========================-->
+    <div class="contacts">
+        <div class="container">
+            <div class="contacts__content">
+                <div class="contacts__text">
+                    <div class="section__title">Контакты</div>
+                    <form action="" class="record__form">
+                        <div class="inputgroup">
+                            <input type="text" placeholder="+7 (___) ___-____" />
+                        </div>
+                        <button class="btn">Заказать звонок</button>
+                    </form>
+                </div>
+                <div class="contacts__map" id="contacts__map"></div>
+            </div>
+        </div>
+    </div>
+    <!--=========================END contacts =========================-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script>
+        //Яндекс Карта
+        ymaps.ready(init);
+        var myMapAll;
+
+        function init() {
+            myMapAll = new ymaps.Map("contacts__map", {
+                center: [55.714663, 37.790893],
+                zoom: 15,
+            });
+            var myPlacemark_1 = new ymaps.Placemark([55.714663, 37.790893], {
+                balloonContentHeader: "Название объекта",
+                balloonContentBody: "Описание объекта",
+                balloonContentFooter: "",
+                hintContent: "Кликните для более подробной информации",
+            });
+            myMapAll.geoObjects.add(myPlacemark_1);
+        }
+        //END Яндекс Карта
+    </script>
+    <!--========================= footer =========================-->
+    <div class="footer">
+        <div class="container">
+            <a href="" class="footer__logo">
+                <img src="img/logo__white.svg" alt="" />
+            </a>
+            <ul class="footer__navbar">
+                <li>
+                    <a href="">Частным клиентам</a>
+                </li>
+                <li>
+                    <a href="">Корпоративным клиентам</a>
+                </li>
+                <li>
+                    <a href="">О компании </a>
+                </li>
+                <li>
+                    <a href="">Контакты </a>
+                </li>
+            </ul>
+            <ul class="footer__contacts">
+                <!-- footer__contacts__item -->
+                <li class="footer__contacts__item">
+                    <div class="footer__contacts__item__label">Адрес:</div>
+                    <div class="footer__contacts__item__title"> 109377, г. Москва <br /> ул. Новокузьминская 1-я д. 19 </div>
+                </li>
+                <!--END footer__contacts__item -->
+                <!-- footer__contacts__item -->
+                <li class="footer__contacts__item">
+                    <div class="footer__contacts__item__label">E-mail:</div>
+                    <div class="footer__contacts__item__title"> med-spravki@mail.ru </div>
+                </li>
+                <!--END footer__contacts__item -->
+                <!-- footer__contacts__item -->
+                <li class="footer__contacts__item">
+                    <div class="footer__contacts__item__label">Телефон:</div>
+                    <div class="footer__contacts__item__title">+7 (495) 786-0017</div>
+                </li>
+                <!--END footer__contacts__item -->
+            </ul>
+            <div class="footer__phoneblock">
+                <a href="" class="footer__phone">+7 (495) 786-0017</a>
+                <button class="btn head__btn" data-modal-show="1"> Заказать обратный звонок </button>
+            </div>
+        </div>
+    </div>
+    <!--=========================END footer =========================-->
+    <!--========================= footer__2 =========================-->
+    <div class="footer__2">
+        <div class="container">
+            <div class="footer__2__content">
+                <div class="footer__2__copyright">© 2020 ООО “Мед-справка”</div>
+                <a class="footer__2__politics" target="_blank" href="https://masterstroi-kbu.ru/wp-content/uploads/2020/08/politika.pdf">Политика конфиденциальности</a>
+                <a target="_blank" href="https://masterstroi-kbu.ru/wp-content/uploads/2020/08/soglashenie.pdf">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </div>
+    <!--=========================END footer__2 =========================-->
     <script src="js/jquery.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
